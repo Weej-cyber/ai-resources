@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Built With Claude · Clarence's AI Resources</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #000000;
+    --surface: #0d0d0d;
+    --border: #222222;
+    --orange: #d97757;
+    --white: #f5f5f5;
+    --dim: #999999;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: 'IBM Plex Mono', monospace;
+    min-height: 100vh;
+    padding: 48px 24px 80px;
+  }
+
+  .container {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 40px;
+    margin-bottom: 48px;
+  }
+
+  .logo-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+
+  .logo-box {
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--orange);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .logo-placeholder {
+    font-size: 22px;
+    color: var(--orange);
+  }
+
+  .site-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--orange);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .site-sub {
+    font-size: 11px;
+    font-weight: 300;
+    color: var(--dim);
+    letter-spacing: 0.05em;
+    margin-top: 3px;
+  }
+
+  h1 {
+    font-size: clamp(22px, 4vw, 32px);
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.25;
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+  }
+
+  h1 .highlight {
+    color: var(--orange);
+  }
+
+  .tagline {
+    font-size: 14px;
+    font-weight: 300;
+    color: #cccccc;
+    line-height: 1.7;
+    max-width: 520px;
+  }
+
+  .tagline strong {
+    color: var(--white);
+    font-weight: 500;
+  }
+
+  .prompt {
+    font-size: 12px;
+    color: var(--orange);
+    margin-bottom: 20px;
+    letter-spacing: 0.05em;
+  }
+
+  .prompt::before {
+    content: '> ';
+  }
+
+  .card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 22px 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--orange);
+    border-radius: 4px;
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: 8px;
+    transition: background 0.15s;
+  }
+
+  .card:hover {
+    background: #111111;
+  }
+
+  .card.inactive {
+    border-left-color: #333;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  .card-num {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--orange);
+    min-width: 28px;
+    flex-shrink: 0;
+  }
+
+  .card-body {
+    flex: 1;
+  }
+
+  .card-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 5px;
+  }
+
+  .card-desc {
+    font-size: 12px;
+    font-weight: 300;
+    color: #cccccc;
+    line-height: 1.5;
+  }
+
+  .card-tag {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border: 1px solid var(--orange);
+    color: var(--orange);
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  .card-tag.dim {
+    border-color: #333;
+    color: #555;
+  }
+
+  footer {
+    margin-top: 56px;
+    padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .footer-left {
+    font-size: 11px;
+    font-weight: 300;
+    color: #cccccc;
+  }
+
+  .footer-left strong {
+    color: var(--white);
+    font-weight: 500;
+  }
+
+  .blink {
+    display: inline-block;
+    width: 8px;
+    height: 13px;
+    background: var(--orange);
+    vertical-align: middle;
+    margin-left: 4px;
+    animation: blink 1.1s step-end infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="logo-row">
+      <div class="logo-box">
+        <!-- Replace with: <img src="claude-logo.png" alt="Claude"> once downloaded -->
+        <span class="logo-placeholder">◆</span>
+      </div>
+      <div>
+        <div class="site-name">Built With Claude</div>
+        <div class="site-sub">by Clarence · weej.app</div>
+      </div>
+    </div>
+
+    <h1>AI Tools &amp; Resources<br>That <span class="highlight">Actually Work</span></h1>
+
+    <p class="tagline">
+      Everything here is <strong>functional</strong>. Real artifacts, working tools, and resources built through hands-on practice. Not theory. Not screenshots. <strong>Clickable and usable.</strong>
+    </p>
+  </div>
+
+  <div class="prompt">resources/</div>
+
+  <a href="anthropic_academy.html" class="card">
+    <div class="card-num">01</div>
+    <div class="card-body">
+      <div class="card-title">Anthropic Academy — Full Course List</div>
+      <div class="card-desc">All 13 official Claude courses. Organized by track. Every link clickable. Free and certified.</div>
+    </div>
+    <div class="card-tag">Live</div>
+  </a>
+
+  <div class="card inactive">
+    <div class="card-num">02</div>
+    <div class="card-body">
+      <div class="card-title">Claude + Gemini Prompt Workflow</div>
+      <div class="card-desc">How to use Claude to engineer prompts for AI image generation.</div>
+    </div>
+    <div class="card-tag dim">Soon</div>
+  </div>
+
+  <div class="card inactive">
+    <div class="card-num">03</div>
+    <div class="card-body">
+      <div class="card-title">More Coming</div>
+      <div class="card-desc">New artifacts and tools added as they're built.</div>
+    </div>
+    <div class="card-tag dim">Soon</div>
+  </div>
+
+  <footer>
+    <div class="footer-left">
+      <strong>Clarence</strong> · Senior Business Systems Analyst · AI Practitioner
+    </div>
+    <div class="footer-left">
+      Built with Claude<span class="blink"></span>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
